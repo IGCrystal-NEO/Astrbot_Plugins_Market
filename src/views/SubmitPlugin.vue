@@ -354,7 +354,7 @@ const prevStep = () => {
 }
 
 const submitPlugin = () => {
-  const issueUrl = 'https://github.com/AstrBotDevs/AstrBot/issues/new?template=PLUGIN_PUBLISH.md'
+  const issueUrl = 'https://github.com/AstrBotDevs/AstrBot/issues/new?template=PLUGIN_PUBLISH.yml'
   window.open(issueUrl, '_blank')
   stepChecks.issueOpened = true
 }

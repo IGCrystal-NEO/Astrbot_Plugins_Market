@@ -29,7 +29,7 @@
             <n-icon><document-text /></n-icon>
             开发文档
           </a>
-          <a href="https://github.com/AstrBotDevs/AstrBot/issues/new?template=PLUGIN_PUBLISH.md" target="_blank" class="footer-link">
+          <a href="https://github.com/AstrBotDevs/AstrBot/issues/new?template=PLUGIN_PUBLISH.yml" target="_blank" class="footer-link">
             <n-icon><git-branch /></n-icon>
             提交插件
           </a>
