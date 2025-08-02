@@ -11,6 +11,8 @@
       </div>
     </n-message-provider>
   </n-config-provider>
+  <Analytics />
+  <SpeedInsights />
 </template>
 
 <script setup>
@@ -25,6 +27,9 @@ import BackToTop from './components/BackToTop.vue'
 import { lightThemeOverrides } from './config/lightTheme'
 import { darkThemeOverrides } from './config/darkTheme'
 import { usePluginStore } from './stores/plugins'
+
+import { Analytics } from '@vercel/analytics/vue'
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 
 const store = usePluginStore()
 
