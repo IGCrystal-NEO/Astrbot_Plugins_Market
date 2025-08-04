@@ -16,12 +16,43 @@
       class="top-pagination"
     />
     <main class="plugins-grid">
-      <plugin-card
-        v-for="(plugin, index) in paginatedPlugins"
-        :key="`${plugin.name}-${filterKey}`"
-        :plugin="plugin"
-        :index="index"
-      />
+      <!-- 加载状态 -->
+      <div v-if="isLoading" class="loading-container">
+        <div class="custom-loading">
+          <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="loading-text">正在加载插件数据</div>
+        </div>
+      </div>
+      
+      <!-- 空状态提示 -->
+      <div v-else-if="!isLoading && filteredPlugins.length === 0" class="empty-state">
+        <div class="empty-icon">
+          <n-icon size="48" :component="SearchOutline" />
+        </div>
+        <h3 class="empty-title">没有找到相关插件哦</h3>
+        <p class="empty-description">
+          <span v-if="searchQuery || selectedTag">
+            试试调整搜索内容呢
+          </span>
+          <span v-else>
+            当前没有可用的插件数据
+          </span>
+        </p>
+      </div>
+      
+      <!-- 插件卡片 -->
+      <template v-else>
+        <plugin-card
+          v-for="(plugin, index) in paginatedPlugins"
+          :key="`${plugin.name}-${filterKey}`"
+          :plugin="plugin"
+          :index="index"
+        />
+      </template>
     </main>
     <app-pagination
       v-if="totalPages > 1"
@@ -35,7 +66,8 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
-import { NLayout } from 'naive-ui'
+import { NLayout, NSpin, NIcon } from 'naive-ui'
+import { SearchOutline } from '@vicons/ionicons5'
 import AppHeader from '../components/AppHeader.vue'
 import PluginCard from '../components/PluginCard.vue'
 import AppPagination from '../components/AppPagination.vue'
@@ -53,7 +85,9 @@ const {
   sortBy,
   tagOptions,
   totalPages,
-  paginatedPlugins
+  paginatedPlugins,
+  isLoading,
+  filteredPlugins
 } = storeToRefs(store)
 
 // 计算属性
@@ -109,5 +143,124 @@ onMounted(() => {
     gap: 16px;
     padding: 16px;
   }
+}
+
+.loading-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 300px;
+  padding-top: 120px;
+}
+
+.custom-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  opacity: 0.8;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* 确保加载动画流畅恒定 */
+.loading-container :deep(.n-spin) {
+  will-change: transform;
+  transform: translateZ(0); /* 启用硬件加速 */
+}
+
+.loading-container :deep(.n-spin-icon) {
+  animation-timing-function: linear !important; /* 强制线性动画 */
+  animation-duration: 1s !important; /* 固定动画时长 */
+  will-change: transform;
+  transform: translateZ(0); /* 启用硬件加速 */
+}
+
+.loading-container :deep(.n-spin-body) {
+  will-change: auto;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 300px;
+  padding-top: 80px;
+  text-align: center;
+  color: var(--text-color-2);
+}
+
+.empty-icon {
+  margin-bottom: 16px;
+  opacity: 0.6;
+  color: var(--text-color-3);
+}
+
+.empty-title {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color-1);
+}
+
+.empty-description {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-color-2);
+  opacity: 0.8;
 }
 </style>

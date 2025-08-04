@@ -148,6 +148,7 @@ export const usePluginStore = defineStore('plugins', () => {
     currentPage,
     isDarkMode,
     sortBy,
+    isLoading,
     // 计算属性
     allTags,
     tagOptions,
