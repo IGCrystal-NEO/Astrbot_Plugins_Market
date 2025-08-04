@@ -45,111 +45,108 @@
 
     <div class="page-content">
       <div class="main-section">
-        <!-- 步骤内容容器 - 修复宽度跳动 -->
-        <div class="step-content-container">
-          <!-- 步骤1：表单 -->
-          <transition name="step-slide">
-            <div v-if="currentStep === 1" class="step-content-wrapper" key="step1">
-              <n-card title="基本信息" class="form-card">
-                <n-form ref="formRef" :model="formData" :rules="rules">
-                  <n-grid :x-gap="12" :cols="1" :item-responsive="true">
-                    <n-grid-item>
-                      <n-form-item label="插件名称" path="name" class="form-item-animated">
-                        <n-input v-model:value="formData.name" placeholder="请输入插件名称" />
-                      </n-form-item>
-                    </n-grid-item>
-                    <n-grid-item>
-                      <n-form-item label="插件描述" path="desc" class="form-item-animated">
-                        <n-input 
-                          v-model:value="formData.desc" 
-                          type="textarea" 
-                          placeholder="请输入插件描述"
-                        />
-                      </n-form-item>
-                    </n-grid-item>
-                    <n-grid-item>
-                      <n-form-item label="作者" path="author" class="form-item-animated">
-                        <n-input v-model:value="formData.author" placeholder="请输入作者名称" />
-                      </n-form-item>
-                    </n-grid-item>
-                    <n-grid-item>
-                      <n-form-item label="仓库地址" path="repo" class="form-item-animated">
-                        <n-input v-model:value="formData.repo" placeholder="请输入GitHub仓库地址" />
-                      </n-form-item>
-                    </n-grid-item>
-                    <n-grid-item>
-                      <n-form-item label="标签（可选，按回车添加）" path="tags" class="form-item-animated">
-                        <n-dynamic-tags v-model:value="formData.tags" />
-                      </n-form-item>
-                    </n-grid-item>
-                    <n-grid-item>
-                      <n-form-item label="社交链接（可选）" path="social_link" class="form-item-animated">
-                        <n-input 
-                          v-model:value="formData.social_link" 
-                          placeholder="请输入社交链接，如个人主页、Twitter等" 
-                        />
-                      </n-form-item>
-                    </n-grid-item>
-                  </n-grid>
-                </n-form>
-              </n-card>
-            </div>
-          </transition>
+        <!-- 步骤1：表单 -->
+        <transition name="step-slide">
+          <div v-if="currentStep === 1" class="form-section" key="step1">
+            <n-card title="基本信息" class="form-card">
+              <n-form ref="formRef" :model="formData" :rules="rules">
+                <n-grid :x-gap="12" :cols="1" :item-responsive="true">
+                  <n-grid-item>
+                    <n-form-item label="插件名称" path="name" class="form-item-animated">
+                      <n-input v-model:value="formData.name" placeholder="请输入插件名称" />
+                    </n-form-item>
+                  </n-grid-item>
+                  <n-grid-item>
+                    <n-form-item label="插件描述" path="desc" class="form-item-animated">
+                      <n-input 
+                        v-model:value="formData.desc" 
+                        type="textarea" 
+                        placeholder="请输入插件描述"
+                      />
+                    </n-form-item>
+                  </n-grid-item>
+                  <n-grid-item>
+                    <n-form-item label="作者" path="author" class="form-item-animated">
+                      <n-input v-model:value="formData.author" placeholder="请输入作者名称" />
+                    </n-form-item>
+                  </n-grid-item>
+                  <n-grid-item>
+                    <n-form-item label="仓库地址" path="repo" class="form-item-animated">
+                      <n-input v-model:value="formData.repo" placeholder="请输入GitHub仓库地址" />
+                    </n-form-item>
+                  </n-grid-item>
+                  <n-grid-item>
+                    <n-form-item label="标签（可选，按回车添加）" path="tags" class="form-item-animated">
+                      <n-dynamic-tags v-model:value="formData.tags" />
+                    </n-form-item>
+                  </n-grid-item>
+                  <n-grid-item>
+                    <n-form-item label="社交链接（可选）" path="social_link" class="form-item-animated">
+                      <n-input 
+                        v-model:value="formData.social_link" 
+                        placeholder="请输入社交链接，如个人主页、Twitter等" 
+                      />
+                    </n-form-item>
+                  </n-grid-item>
+                </n-grid>
+              </n-form>
+            </n-card>
+          </div>
+        </transition>
 
-          <!-- 步骤2：JSON预览 -->
-          <transition name="step-slide">
-            <div v-if="currentStep === 2" class="step-content-wrapper" key="step2">
-              <n-card title="JSON预览" class="json-card">
-                <template #header-extra>
-                  <n-button @click="copyJSON" type="primary" ghost :disabled="!generatedJSON" class="copy-button">
-                    <template #icon>
-                      <n-icon><copy /></n-icon>
-                    </template>
-                    复制JSON
-                  </n-button>
-                </template>
-                <div class="json-content">
-                  <n-code
-                    :code="generatedJSON || '点击生成按钮生成JSON'"
-                    language="json"
-                    :word-wrap="true"
-                  />
-                </div>
-              </n-card>
-            </div>
-          </transition>
+        <!-- 步骤2：JSON预览 -->
+        <transition name="step-slide">
+          <div v-if="currentStep === 2" class="json-preview-section" key="step2">
+            <n-card title="JSON预览" class="json-card">
+              <template #header-extra>
+                <n-button @click="copyJSON" type="primary" ghost :disabled="!generatedJSON" class="copy-button">
+                  <template #icon>
+                    <n-icon><copy /></n-icon>
+                  </template>
+                  复制JSON
+                </n-button>
+              </template>
+              <div class="json-content">
+                <n-code
+                  :code="generatedJSON || '点击生成按钮生成JSON'"
+                  language="json"
+                  :word-wrap="true"
+                />
+              </div>
+            </n-card>
+          </div>
+        </transition>
 
-          <!-- 步骤3：提交指南 -->
-          <transition name="step-slide">
-            <div v-if="currentStep === 3" class="step-content-wrapper" key="step3">
-              <n-card title="提交指南" class="guide-card">
-                <n-timeline>
-                  <n-timeline-item 
-                    title="复制JSON" 
-                    :color="stepChecks.copied ? 'green' : 'grey'"
-                    class="timeline-item"
-                  >
-                    确保已复制生成的JSON内容
-                  </n-timeline-item>
-                  <n-timeline-item 
-                    title="打开Issue页面" 
-                    :color="stepChecks.issueOpened ? 'green' : 'grey'"
-                    class="timeline-item"
-                  >
-                    即将在新标签页中打开GitHub Issue模板
-                  </n-timeline-item>
-                  <n-timeline-item 
-                    title="粘贴并提交" 
-                    color="grey"
-                    class="timeline-item"
-                  >
-                    将JSON粘贴到指定位置并提交Issue
-                  </n-timeline-item>
-                </n-timeline>
-              </n-card>
-            </div>
-          </transition>
-        </div>
+        <!-- 步骤3：提交指南 -->
+        <transition name="step-slide">
+          <div v-if="currentStep === 3" class="submit-guide-section" key="step3">
+            <n-card title="提交指南" class="guide-card">
+              <n-timeline>
+                <n-timeline-item 
+                  title="复制JSON" 
+                  :color="stepChecks.copied ? 'green' : 'grey'"
+                  class="timeline-item"
+                >
+                  确保已复制生成的JSON内容
+                </n-timeline-item>
+                <n-timeline-item 
+                  title="打开Issue页面" 
+                  :color="stepChecks.issueOpened ? 'green' : 'grey'"
+                  class="timeline-item"
+                >
+                  即将在新标签页中打开GitHub Issue模板
+                </n-timeline-item>
+                <n-timeline-item 
+                  title="粘贴并提交" 
+                  color="grey"
+                  class="timeline-item"
+                >
+                  将JSON粘贴到指定位置并提交Issue
+                </n-timeline-item>
+              </n-timeline>
+            </n-card>
+          </div>
+        </transition>
       </div>
 
       <!-- 底部操作栏 -->
@@ -619,43 +616,10 @@ const submitPlugin = () => {
   min-height: 400px;
 }
 
-/* 修复宽度跳动的关键样式 */
-.step-content-container {
-  position: relative;
-  width: 100%;
-  min-height: 500px; /* 设置最小高度避免高度跳动 */
-}
-
-.step-content-wrapper {
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .form-card,
 .json-card,
 .guide-card {
   margin-bottom: calc(var(--action-bar-height) + 60px);
-  width: 100%; /* 确保卡片宽度一致 */
-  box-sizing: border-box;
-}
-
-/* 表单专用的紧凑样式 */
-.form-card :deep(.n-card__content) {
-  padding: 16px 20px; /* 减少内边距 */
-}
-
-.form-card :deep(.n-form-item-label) {
-  padding-bottom: 6px; /* 减少标签下方间距 */
-}
-
-.form-card :deep(.n-input),
-.form-card :deep(.n-input__input),
-.form-card :deep(.n-base-selection) {
-  min-height: 36px; /* 减少输入框高度 */
-}
-
-.form-card :deep(.n-dynamic-tags) {
-  min-height: 36px; /* 减少标签输入框高度 */
 }
 
 .json-preview-section {
@@ -724,30 +688,7 @@ const submitPlugin = () => {
 }
 
 :deep(.n-form-item) {
-  margin-bottom: 16px; /* 从24px减少到16px */
-}
-
-/* 进一步紧凑化表单 */
-:deep(.n-form-item-label) {
-  padding-bottom: 4px; /* 减少标签下方间距 */
-  font-size: 14px; /* 稍微减小字体大小 */
-}
-
-:deep(.n-input),
-:deep(.n-input__input),
-:deep(.n-base-selection),
-:deep(.n-select) {
-  min-height: 34px; /* 减少输入框高度 */
-}
-
-:deep(.n-dynamic-tags) {
-  min-height: 34px; /* 减少标签输入框高度 */
-}
-
-/* 减少卡片标题的间距 */
-.n-card h3 {
-  margin: 0 0 12px 0; /* 减少标题下方间距 */
-  font-size: 18px; /* 稍微减小标题字体 */
+  margin-bottom: 24px;
 }
 
 :deep(.n-input-group) {
@@ -762,32 +703,22 @@ const submitPlugin = () => {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 优化的步骤切换动画 - 防止宽度跳动 */
+/* 步骤切换动画 */
 .step-slide-enter-active,
 .step-slide-leave-active {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   width: 100%;
 }
 
 .step-slide-enter-from {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(50px);
 }
 
 .step-slide-leave-to {
   opacity: 0;
-  transform: translateX(-40px);
-}
-
-.step-slide-leave-active {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  transform: translateX(-50px);
 }
 
 /* 表单项动画 */
@@ -900,14 +831,10 @@ const submitPlugin = () => {
   .submit-plugin-page {
     --action-bar-height: 64px;
   }
-
-  .step-content-container {
-    min-height: 400px;
-  }
 }
 
 @media (max-width: 425px) {
-  .submit-steps {
+    .submit-steps {
     :deep(.n-step) {
       display: none;
       
@@ -946,10 +873,6 @@ const submitPlugin = () => {
 
   :deep(.n-card__content) {
     padding: 16px;
-  }
-
-  .step-content-container {
-    min-height: 350px;
   }
 }
 </style>
