@@ -297,6 +297,7 @@ const showDetails = () => {
   box-shadow: var(--shadow-sm);
   background-color: var(--bg-card);
   min-height: 200px;
+  max-height: max-content;
   display: flex;
   flex-direction: column;
   min-width: 100%;
