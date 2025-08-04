@@ -137,7 +137,26 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 768px) {
+/* 平板和中等屏幕 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .plugins-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 18px;
+  }
+}
+
+/* 小平板屏幕 */
+@media (max-width: 768px) and (min-width: 481px) {
+  .plugins-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 18px;
+    padding: 16px;
+  }
+}
+
+/* 手机屏幕 */
+@media (max-width: 480px) {
   .plugins-grid {
     grid-template-columns: 1fr;
     gap: 16px;
