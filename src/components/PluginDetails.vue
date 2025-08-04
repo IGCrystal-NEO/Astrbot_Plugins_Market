@@ -143,20 +143,58 @@ async function fetchReadme() {
     // 假设仓库地址格式为 https://github.com/owner/repo
     const [owner, repo] = props.plugin.repo.split('/').slice(-2)
     
+    let response
+    let readmeText = ''
+    
     // 先尝试 main 分支
-    let response = await fetch(`https://github.wenturc.com/${owner}/${repo}/main/README.md`)
-    
-    // 如果 main 分支不存在，尝试 master 分支
-    if (!response.ok) {
-      response = await fetch(`https://github.wenturc.com/${owner}/${repo}/master/README.md`)
+    console.log(`尝试获取 main 分支的 README: ${owner}/${repo}`)
+    try {
+      response = await fetch(`https://github.wenturc.com/${owner}/${repo}/main/README.md`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'text/plain',
+        },
+        timeout: 10000
+      })
+      
+      if (response.ok) {
+        readmeText = await response.text()
+        console.log(`成功从 main 分支获取 README: ${owner}/${repo}`)
+      } else {
+        console.log(`main 分支返回状态: ${response.status}`)
+        throw new Error(`Main branch returned ${response.status}`)
+      }
+    } catch (mainError) {
+      console.log(`main 分支失败，尝试 master 分支: ${mainError.message}`)
+      
+      // 如果 main 分支失败，尝试 master 分支
+      try {
+        response = await fetch(`https://github.wenturc.com/${owner}/${repo}/master/README.md`, {
+          method: 'GET',
+          headers: {
+            'Accept': 'text/plain',
+          },
+          timeout: 10000
+        })
+        
+        if (response.ok) {
+          readmeText = await response.text()
+          console.log(`成功从 master 分支获取 README: ${owner}/${repo}`)
+        } else {
+          console.log(`master 分支返回状态: ${response.status}`)
+          throw new Error(`Master branch returned ${response.status}`)
+        }
+      } catch (masterError) {
+        console.log(`master 分支也失败: ${masterError.message}`)
+        throw new Error(`无法从 main 和 master 分支获取 README: ${mainError.message}, ${masterError.message}`)
+      }
     }
     
-    if (!response.ok) {
-      throw new Error('Failed to fetch README from both main and master branches')
+    if (!readmeText) {
+      throw new Error('README 内容为空')
     }
     
-    const text = await response.text()
-    readmeHtml.value = marked(text)
+    readmeHtml.value = marked(readmeText)
   } catch (err) {
     console.error('Error fetching README:', err)
     error.value = true
