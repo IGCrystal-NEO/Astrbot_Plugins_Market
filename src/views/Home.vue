@@ -116,7 +116,7 @@ onMounted(() => {
 
 .plugins-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   max-width: 1400px;
   gap: 24px;
   padding: 20px;
@@ -143,6 +143,12 @@ onMounted(() => {
     gap: 16px;
     padding: 16px;
   }
+}
+
+/* 限制单个卡片的最大宽度，防止占据整行 */
+.plugins-grid > * {
+  max-width: 500px;
+  justify-self: center;
 }
 
 .loading-container {
