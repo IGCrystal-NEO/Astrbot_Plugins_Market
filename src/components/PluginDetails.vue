@@ -144,11 +144,11 @@ async function fetchReadme() {
     const [owner, repo] = props.plugin.repo.split('/').slice(-2)
     
     // 先尝试 main 分支
-    let response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`)
+    let response = await fetch(`https://github.wenturc.com/${owner}/${repo}/main/README.md`)
     
     // 如果 main 分支不存在，尝试 master 分支
     if (!response.ok) {
-      response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/master/README.md`)
+      response = await fetch(`https://github.wenturc.com/${owner}/${repo}/master/README.md`)
     }
     
     if (!response.ok) {
