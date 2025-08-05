@@ -410,8 +410,8 @@
       "趣味",
       "宠物"
     ],
-    "stars": 4,
-    "updated_at": "2025-07-24T05:42:02Z",
+    "stars": 5,
+    "updated_at": "2025-08-05T17:44:15Z",
     "version": "v1.1"
   },
   "astrbot_plugin_error_monitor": {
@@ -609,8 +609,8 @@
     "author": "timetetng",
     "repo": "https://github.com/timetetng/astrbot_plugin_ip_proxy",
     "tags": [],
-    "stars": 0,
-    "updated_at": "2025-07-17T09:38:36Z",
+    "stars": 1,
+    "updated_at": "2025-08-05T17:46:09Z",
     "version": "v1.5"
   },
   "astrbot_plugin_cmd_console": {
@@ -1684,8 +1684,8 @@
     "tags": [
       "股市"
     ],
-    "stars": 1,
-    "updated_at": "2025-07-20T14:46:46Z",
+    "stars": 2,
+    "updated_at": "2025-08-05T17:45:34Z",
     "version": "v1.2.2"
   },
   "astrbot_plugin_kfc_thursday": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-05T17:24:27Z",
+    "updated_at": "2025-08-05T18:40:14Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -2980,8 +2980,8 @@
       "浏览器"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_browser",
-    "stars": 13,
-    "updated_at": "2025-08-04T02:45:21Z",
+    "stars": 14,
+    "updated_at": "2025-08-05T17:42:03Z",
     "version": "v1.1.3"
   },
   "astrbot_plugin_QQAdmin": {
@@ -3636,7 +3636,7 @@
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_box",
     "stars": 39,
-    "updated_at": "2025-08-05T14:43:26Z",
+    "updated_at": "2025-08-05T18:04:05Z",
     "version": "v1.1.4"
   },
   "astrbot_plugin_yuafeng": {
