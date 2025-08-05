@@ -1,4 +1,113 @@
 {
+  "astrbot_plugin_soupai": {
+    "name": "astrbot_plugin_soupai",
+    "desc": "AI 海龟汤推理游戏插件，支持自动生成谜题、智能判断、验证系统、智能提示、存储库管理等功能。网络题库包含近300道海龟汤，还在持续更新中。",
+    "author": "KONpiGG",
+    "repo": "https://github.com/KONpiGG/astrbot_plugin_soupai",
+    "tags": [
+      "海龟汤"
+    ],
+    "stars": 1,
+    "updated_at": "2025-08-05T12:14:03Z",
+    "version": "v1.0.0"
+  },
+  "astrbot_plugin_typst_render": {
+    "name": "astrbot_plugin_typst_render",
+    "desc": "渲染 Typst 代码并返回图片",
+    "author": "Laplace",
+    "repo": "https://github.com/Laplace825/astrbot_plugin_typst_render",
+    "tags": [
+      "Typst"
+    ],
+    "social_link": "www.blog.lap-lace.top",
+    "stars": 0,
+    "updated_at": "2025-08-05T03:02:50Z",
+    "version": "v0.2.1"
+  },
+  "astrbot_plugin_friberg": {
+    "desc": "猜 CS Player 的小游戏",
+    "author": "oldPeter616",
+    "repo": "https://github.com/oldPeter616/astrbot_plugin_friberg",
+    "tags": [
+      "CS",
+      "游戏",
+      "弗一把"
+    ],
+    "stars": 1,
+    "updated_at": "2025-08-05T07:27:15Z",
+    "version": "v1.6.0"
+  },
+  "astrbot_plugin_better_markdown_to_image": {
+    "desc": "更好的 Markdown 转图片，支持自动转换来自 LLM 的回复的 Markdown 内容和指令直接转换",
+    "author": "MLSLi",
+    "repo": "https://github.com/MLSLi/astrbot_plugin_better_markdown_to_image",
+    "tags": [
+      "Markdown",
+      "文转图"
+    ],
+    "stars": 0,
+    "updated_at": "2025-08-03T16:59:29Z",
+    "version": "v1.0"
+  },
+  "pjsk_guess_song": {
+    "desc": "PJSK 猜歌游戏插件",
+    "author": "nichinichisou",
+    "repo": "https://github.com/nichinichisou0609/astrbot_plugin_pjsk_guess_song",
+    "tags": [
+      "pjsk",
+      "猜歌",
+      "初音未来 缤纷舞台"
+    ],
+    "stars": 0,
+    "updated_at": "2025-08-05T13:48:02Z",
+    "version": "v1.1.0"
+  },
+  "astrbot_plugin_screenctrl": {
+    "desc": "屏幕控制插件，支持截屏、点击、按键等",
+    "author": "Zhalslar",
+    "repo": "https://github.com/Zhalslar/astrbot_plugin_screenctrl",
+    "tags": [
+      "屏幕控制"
+    ],
+    "social_link": "https://github.com/Zhalslar",
+    "stars": 2,
+    "updated_at": "2025-08-05T15:16:35Z",
+    "version": "v1.0.0"
+  },
+  "astrbot_plugin_error_pro": {
+    "desc": "屏蔽机器人的错误消息，选择是否发送给管理员，支持AI友好解释。",
+    "author": "Chris",
+    "repo": "https://github.com/Chris95743/astrbot_plugin_error_pro",
+    "tags": [
+      "报错",
+      "屏蔽",
+      "轮询"
+    ],
+    "stars": 1,
+    "updated_at": "2025-08-03T13:48:41Z",
+    "version": "v1.2.0"
+  },
+  "astrbot_plugin_silent": {
+    "desc": "一个极其简单的静默插件，当LLM回复内容中包含 silent 关键词时，自动阻止发送回复消息。",
+    "author": "Chris",
+    "repo": "https://github.com/chris95743/astrbot_plugin_silent",
+    "social_link": "https://wickh.cn",
+    "tags": [],
+    "stars": 1,
+    "updated_at": "2025-08-01T05:01:41Z",
+    "version": "v1.0.0"
+  },
+  "astrbot_plugin_random_likes": {
+    "desc": "[仅 QQ] 智能检测点赞关键词并自动随机点赞数",
+    "author": "--sora--",
+    "repo": "https://github.com/sora-yyds/astrbot_plugin_random_likes",
+    "tags": [
+      "点赞"
+    ],
+    "stars": 0,
+    "updated_at": "2025-07-29T12:55:25Z",
+    "version": "v1.0"
+  },
   "astrbot_plugin_image_censor": {
     "desc": "AstrBot 图片审查插件",
     "author": "Omnisch",
@@ -84,15 +193,17 @@
     "updated_at": "2025-07-29T08:30:46Z",
     "version": "v1.0.1"
   },
-  "astrbot_plugin_img_rev_seacher": {
+  "astrbot_plugin_img_rev_searcher": {
     "desc": "图片反搜项目，以图搜图，找出处",
     "author": "drdon1234",
-    "repo": "https://github.com/drdon1234/astrbot_plugin_img_rev_seacher",
+    "repo": "https://github.com/drdon1234/astrbot_plugin_img_rev_searcher",
     "tags": [
-      "图片反搜"
+      "图片反搜",
+      "以图搜图",
+      "找出处"
     ],
     "stars": 0,
-    "updated_at": "2025-08-04T20:12:55Z",
+    "updated_at": "2025-08-04T20:12:17Z",
     "version": "3.1"
   },
   "astrbot_plugin_LLMTempBan": {
@@ -2375,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-05T14:29:37Z",
+    "updated_at": "2025-08-05T15:29:59Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -3524,8 +3635,8 @@
       "功能"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_box",
-    "stars": 38,
-    "updated_at": "2025-08-02T21:05:48Z",
+    "stars": 39,
+    "updated_at": "2025-08-05T14:43:26Z",
     "version": "v1.1.4"
   },
   "astrbot_plugin_yuafeng": {
