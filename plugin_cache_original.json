@@ -59,8 +59,8 @@
       "初音未来 缤纷舞台"
     ],
     "stars": 1,
-    "updated_at": "2025-08-06T06:19:43Z",
-    "version": "v1.1.0"
+    "updated_at": "2025-08-06T12:34:21Z",
+    "version": "v1.1.1"
   },
   "astrbot_plugin_screenctrl": {
     "desc": "屏幕控制插件，支持截屏、点击、按键等",
@@ -1172,8 +1172,8 @@
       "魔方"
     ],
     "social_link": "https://github.com/Zhalslar",
-    "stars": 1,
-    "updated_at": "2025-06-19T02:41:14Z",
+    "stars": 2,
+    "updated_at": "2025-08-06T12:23:06Z",
     "version": "v1.0.1"
   },
   "astrbot_plugin_constellation": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-06T11:23:11Z",
+    "updated_at": "2025-08-06T12:56:28Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -4561,8 +4561,8 @@
     "author": "长安某",
     "repo": "https://github.com/zgojin/astrbot_plugin_niuniu",
     "tags": [],
-    "stars": 11,
-    "updated_at": "2025-07-18T15:19:50Z",
+    "stars": 12,
+    "updated_at": "2025-08-06T12:16:42Z",
     "version": "v4.7.2"
   },
   "astrbot_plugin_mohoyo_cos": {
