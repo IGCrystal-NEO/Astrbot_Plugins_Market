@@ -58,8 +58,8 @@
       "猜歌",
       "初音未来 缤纷舞台"
     ],
-    "stars": 0,
-    "updated_at": "2025-08-06T02:12:35Z",
+    "stars": 1,
+    "updated_at": "2025-08-06T06:19:43Z",
     "version": "v1.1.0"
   },
   "astrbot_plugin_screenctrl": {
@@ -1986,8 +1986,8 @@
       "广播"
     ],
     "social_link": "https://github.com/Zhalslar",
-    "stars": 5,
-    "updated_at": "2025-08-03T01:38:50Z",
+    "stars": 6,
+    "updated_at": "2025-08-06T06:27:54Z",
     "version": "v1.0.2"
   },
   "astrbot_plugin_nobot": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-06T05:34:17Z",
+    "updated_at": "2025-08-06T06:40:37Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -2992,8 +2992,8 @@
     "tags": [
       "QQ群管"
     ],
-    "stars": 33,
-    "updated_at": "2025-07-31T12:14:44Z",
+    "stars": 34,
+    "updated_at": "2025-08-06T06:38:58Z",
     "version": "v3.0.8"
   },
   "astrbot_plugin_liars_bar": {
