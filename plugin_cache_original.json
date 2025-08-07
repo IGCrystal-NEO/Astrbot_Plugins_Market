@@ -2278,8 +2278,8 @@
       "api"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_apis",
-    "stars": 57,
-    "updated_at": "2025-08-05T13:55:56Z",
+    "stars": 58,
+    "updated_at": "2025-08-07T01:52:04Z",
     "version": "v1.0.9"
   },
   "astrbot_plugin_help": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-06T23:25:38Z",
+    "updated_at": "2025-08-07T02:10:33Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -4124,8 +4124,8 @@
     "author": "anka",
     "repo": "https://github.com/anka-afk/astrbot_plugin_humanlike",
     "tags": [],
-    "stars": 20,
-    "updated_at": "2025-07-31T23:02:06Z",
+    "stars": 21,
+    "updated_at": "2025-08-07T02:21:43Z",
     "version": "v0.2.2"
   },
   "astrbot_plugin_blue_archive": {
@@ -4147,8 +4147,8 @@
       "webui",
       "图床"
     ],
-    "stars": 70,
-    "updated_at": "2025-08-05T08:43:15Z",
+    "stars": 71,
+    "updated_at": "2025-08-07T01:51:38Z",
     "version": "v3.13"
   },
   "mccloud_command": {
