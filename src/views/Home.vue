@@ -114,19 +114,19 @@ onMounted(() => {
   flex-direction: column;
 }
 
-.plugins-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  max-width: 1400px;
-  gap: 24px;
-  padding: 20px;
-  min-height: calc(100vh - 64px); /* 减去头部高度 */
-  margin: 0 auto;
-  flex: 1;
-  animation: gridAppear 0.3s ease-out;
-  animation-delay: 0.7s;
-  animation-fill-mode: backwards;
-}
+  .plugins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    max-width: 1400px;
+    gap: 24px;
+    padding: 20px;
+    margin: 0 auto;
+    animation: gridAppear 0.3s ease-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+    align-content: start;  /* 防止行被拉伸填满容器高度 */
+    align-items: start;    /* 防止卡片在行内被拉伸增高 */
+  }
 
 @keyframes gridAppear {
   from {

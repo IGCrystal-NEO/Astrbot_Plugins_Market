@@ -3,7 +3,7 @@
     class="plugin-card" 
     :bordered="false" 
     :style="{ borderRadius: '16px' }" 
-    :content-style="{ padding: '12px 16px' }"
+    :content-style="{ padding: '8px 16px' }"
     @click="showDetails"
     role="article"
     :aria-label="`插件: ${plugin.name}`"
@@ -296,7 +296,7 @@ const showDetails = () => {
   border: 3px solid var(--border-base);
   box-shadow: var(--shadow-sm);
   background-color: var(--bg-card);
-  min-height: 200px;
+  min-height: 180px;
   max-height: max-content;
   display: flex;
   flex-direction: column;
@@ -316,11 +316,21 @@ const showDetails = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
+  padding: 8px 16px;
   border-bottom: 1px solid var(--border-base);
   background: var(--bg-card);
   border-radius: 15px 15px 0 0;
-  min-height: 50px;
+  min-height: 44px;
+}
+
+/* 缩小 n-card 头部与内容之间的间距 */
+:deep(.n-card__header) {
+  margin-bottom: 0 !important;
+  padding-bottom: 6px !important;
+}
+:deep(.n-card-header) {
+  margin-bottom: 0 !important;
+  padding-bottom: 6px !important;
 }
 
 @font-face {
@@ -454,10 +464,10 @@ const showDetails = () => {
 }
 
 .description {
-  margin: 6px 0;
+  margin: 4px 0;
   line-height: 1.5;
   font-size: 0.9em;
-  height: 2.7em;
+  height: 3em; /* 两行 * 1.5 行高，避免第二行被裁切 */
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -468,24 +478,43 @@ const showDetails = () => {
 }
 
 .tags-container {
-  margin: 4px 0;
-  min-height: 28px;
+  margin: 2px 0;
+  min-height: 24px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 右侧渐隐，提示还有更多标签 */
+.tags-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0), var(--bg-card));
+  pointer-events: none;
 }
 
 .tags-space {
   width: 100%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .plugin-tag {
   transition: all 0.2s ease;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   background-color: var(--primary-color) !important;
   color: var(--text-tag) !important;
   border: none !important;
-  padding: 2px 10px !important;
+  padding: 2px 8px !important;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
 .plugin-tag:hover {
@@ -498,11 +527,11 @@ const showDetails = () => {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85em;
-  padding: 6px 0;
+  padding: 4px 0;
   margin: 0px 0;
   border-top: 1px solid var(--border-base);
   color: var(--text-tertiary);
-  min-height: 32px;
+  min-height: 28px;
 }
 
 .author {
@@ -523,8 +552,8 @@ const showDetails = () => {
 
 /* 优化后的按钮区域样式 */
 .plugin-links {
-  margin-top: 4px;
-  min-height: 32px;
+  margin-top: 2px;
+  min-height: 28px;
   display: flex;
 }
 

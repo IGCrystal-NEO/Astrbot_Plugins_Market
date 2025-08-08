@@ -95,9 +95,7 @@ body {
   gap: 28px;
   padding: 20px;
   max-width: 100%;
-  min-height: calc(100vh - 64px); /* 减去头部高度 */
   margin: 0 auto;
-  flex: 1;
   animation: gridAppear 0.3s ease-out;
   animation-delay: 0.7s;
   animation-fill-mode: backwards;
