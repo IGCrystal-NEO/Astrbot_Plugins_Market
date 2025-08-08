@@ -194,6 +194,7 @@ export const usePluginStore = defineStore('plugins', () => {
     isDarkMode,
     sortBy,
     isLoading,
+    randomSeed,
     // 计算属性
     allTags,
     tagOptions,

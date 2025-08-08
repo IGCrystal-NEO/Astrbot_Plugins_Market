@@ -2,7 +2,7 @@
   <n-card 
     class="plugin-card" 
     :bordered="false" 
-    :style="{ borderRadius: '16px' }" 
+    :style="{ borderRadius: '16px', '--card-index': String(index) }" 
     :content-style="{ padding: '8px 16px' }"
     @click="showDetails"
     role="article"
@@ -10,6 +10,7 @@
     aria-roledescription="插件卡片"
     :aria-expanded="showPluginDetails"
     tabindex="0"
+    ref="cardRef"
   >
     <template #header>
       <div 
@@ -178,6 +179,10 @@ const props = defineProps({
   index: {
     type: Number,
     default: 0
+  },
+  seed: {
+    type: [Number, String],
+    default: 0
   }
 })
 
@@ -185,6 +190,7 @@ const isTextOverflow = ref(false)
 const nameContainer = ref(null)
 const nameTextEl = ref(null)
 const pluginNameEl = ref(null)
+const cardRef = ref(null)
 const resizeObserver = ref(null)
 
 const checkTextOverflow = () => {
@@ -211,6 +217,18 @@ const updateMarqueeAnimation = (containerWidth, textWidth) => {
   }
 }
 
+function replayCardAppearAnimation() {
+  // 获取 NCard 的根 DOM 元素
+  const el = cardRef.value && (cardRef.value.$el || cardRef.value)
+  if (!el) return
+  // 先移除动画
+  el.style.animation = 'none'
+  // 强制重排
+  void el.offsetWidth
+  // 恢复动画（使用 CSS 中定义的 cardAppear）
+  el.style.animation = ''
+}
+
 onMounted(() => {
   checkTextOverflow()
   
@@ -226,17 +244,12 @@ onMounted(() => {
   }
 })
 
-watch(() => props.index, (newIndex) => {
-  if (pluginNameEl.value) {
-    // 先移除动画
-    pluginNameEl.value.style.animation = 'none'
-    // 更新 index
-    pluginNameEl.value.style.setProperty('--card-index', newIndex.toString())
-    // 强制重排
-    pluginNameEl.value.offsetHeight
-    // 重新应用动画
-    pluginNameEl.value.style.animation = ''
-  }
+// 当索引或种子变化时，重播卡片出现动画
+watch([
+  () => props.index,
+  () => props.seed
+], () => {
+  replayCardAppearAnimation()
 }, { immediate: true })
 
 onUnmounted(() => {

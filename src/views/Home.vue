@@ -64,9 +64,10 @@
       <template v-else>
         <plugin-card
           v-for="(plugin, index) in paginatedPlugins"
-          :key="`${plugin.name}-${filterKey}`"
+          :key="`${plugin.name}-${filterKey}-${randomSeed}`"
           :plugin="plugin"
           :index="index"
+          :seed="randomSeed"
         />
       </template>
     </main>
@@ -105,7 +106,8 @@ const {
   totalPages,
   paginatedPlugins,
   isLoading,
-  filteredPlugins
+  filteredPlugins,
+  randomSeed
 } = storeToRefs(store)
 
 // 计算属性
