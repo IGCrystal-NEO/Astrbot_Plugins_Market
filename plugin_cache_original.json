@@ -2278,8 +2278,8 @@
       "api"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_apis",
-    "stars": 60,
-    "updated_at": "2025-08-07T09:18:00Z",
+    "stars": 61,
+    "updated_at": "2025-08-08T13:33:33Z",
     "version": "v1.0.9"
   },
   "astrbot_plugin_help": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 19,
-    "updated_at": "2025-08-08T12:54:59Z",
+    "updated_at": "2025-08-08T14:26:41Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -2863,8 +2863,8 @@
     "desc": "[仅QQ] 赞我！（一个名片点赞插件）。可选是否开启白名单。",
     "social_link": "https://github.com/Futureppo",
     "repo": "https://github.com/Futureppo/astrbot_plugin_zanwo",
-    "stars": 9,
-    "updated_at": "2025-07-21T05:20:11Z",
+    "stars": 10,
+    "updated_at": "2025-08-08T14:24:08Z",
     "version": "v1.0.8"
   },
   "astrbot_plugin_ehentai_bot": {
@@ -2886,8 +2886,8 @@
       "复读"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_reread",
-    "stars": 14,
-    "updated_at": "2025-07-31T12:53:11Z",
+    "stars": 15,
+    "updated_at": "2025-08-08T14:01:22Z",
     "version": "v1.1.0"
   },
   "astrbot_plugin_csbaoyan": {
@@ -3660,8 +3660,8 @@
       "实用工具"
     ],
     "stars": 13,
-    "updated_at": "2025-08-05T08:43:26Z",
-    "version": "v2.0.0"
+    "updated_at": "2025-08-08T13:44:22Z",
+    "version": "v2.0.1"
   },
   "astrbot_plugin_pokecheck": {
     "desc": "[仅QQ可用]一个检测“戳”关键词的插件",
@@ -4688,7 +4688,7 @@
     "repo": "https://github.com/xiewoc/astrbot_plugin_tts_Cosyvoice2",
     "tags": [],
     "stars": 10,
-    "updated_at": "2025-08-05T13:34:59Z",
+    "updated_at": "2025-08-08T13:55:37Z",
     "version": "v1.1.0"
   },
   "astrbot_plugin_sign": {
