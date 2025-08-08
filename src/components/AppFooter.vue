@@ -2,7 +2,7 @@
   <footer class="app-footer">
     <div class="footer-content">
       <div class="footer-section">
-        <img src="/logo.webp" alt="Astrbot Logo" class="footer-logo">
+        <img src="/logo.webp" alt="Astrbot Logo" class="footer-logo" width="40" height="40">
         <p class="footer-description">
           Astrbot 插件市场是一个开放的插件分享平台，欢迎开发者们贡献优质插件。
         </p>

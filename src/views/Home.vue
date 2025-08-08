@@ -9,12 +9,14 @@
       :tag-options="tagOptions"
       :total-pages="totalPages"
     />
-    <app-pagination
-      v-if="totalPages > 1"
-      v-model="currentPage"
-      :total-pages="totalPages"
-      class="top-pagination"
-    />
+    <div class="top-pagination-wrapper">
+      <app-pagination
+        v-if="totalPages > 1"
+        v-model="currentPage"
+        :total-pages="totalPages"
+        class="top-pagination"
+      />
+    </div>
     <main class="plugins-grid">
       <!-- 加载状态 -->
       <div v-if="isLoading" class="loading-container">
@@ -54,11 +56,13 @@
         />
       </template>
     </main>
-    <app-pagination
-      v-if="totalPages > 1"
-      v-model="currentPage"
-      :total-pages="totalPages"
-    />
+    <div class="bottom-pagination-wrapper">
+      <app-pagination
+        v-if="totalPages > 1"
+        v-model="currentPage"
+        :total-pages="totalPages"
+      />
+    </div>
     <app-footer />
   </n-layout>
 </template>
@@ -112,6 +116,14 @@ onMounted(() => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.top-pagination-wrapper,
+.bottom-pagination-wrapper {
+  min-height: 48px; /* 占位，避免分页出现/消失造成位移 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
   .plugins-grid {
@@ -174,9 +186,9 @@ onMounted(() => {
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 300px;
-  padding-top: 120px;
+  align-items: center;
+  min-height: 60vh; /* 占位，避免加载完成时大幅推移页脚 */
+  padding-top: 0;
 }
 
 .custom-loading {

@@ -25,7 +25,7 @@
       </n-switch>
     </n-space>
     <div class="header-title">
-      <img src="/logo.webp" alt="Astrbot Logo" class="header-logo">
+      <img src="/logo.webp" alt="Astrbot Logo" class="header-logo" width="48" height="48">
       <div class="title-wrapper">
         <h1>Astrbot 插件市场</h1>
       </div>
@@ -261,7 +261,7 @@ onMounted(() => {
   font-size: 2.75em;
   font-weight: 600;
   letter-spacing: -0.5px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease; /* 避免影响布局的属性动画 */
   font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
