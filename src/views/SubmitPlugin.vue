@@ -624,6 +624,13 @@ const submitPlugin = () => {
   box-sizing: border-box;
 }
 
+/* 给所有卡片添加主题色边框 */
+.form-card,
+.json-card,
+.guide-card {
+  border: 2px solid var(--primary-color);
+}
+
 /* 确保各步骤容器有一致的尺寸 */
 .form-section,
 .json-preview-section,
