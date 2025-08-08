@@ -691,6 +691,11 @@ const submitPlugin = () => {
   margin-bottom: 24px;
 }
 
+/* 隐藏多余的表单反馈包装器 */
+:deep(.n-form-item-feedback-wrapper) {
+  display: none;
+}
+
 :deep(.n-input-group) {
   width: 100%;
 }
