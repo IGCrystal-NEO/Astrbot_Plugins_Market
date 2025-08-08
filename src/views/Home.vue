@@ -17,6 +17,20 @@
         class="top-pagination"
       />
     </div>
+
+    <!-- 随机排序时的工具条 -->
+    <div v-if="sortBy === 'random'" class="grid-toolbar">
+      <div class="grid-toolbar-inner">
+        <span class="toolbar-tip">随机推荐</span>
+        <n-button size="small" tertiary @click="refreshRandomOrder">
+          <template #icon>
+                         <n-icon><sync-outline /></n-icon>
+          </template>
+          换一换
+        </n-button>
+      </div>
+    </div>
+
     <main class="plugins-grid">
       <!-- 加载状态 -->
       <div v-if="isLoading" class="loading-container">
@@ -70,8 +84,8 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
-import { NLayout, NSpin, NIcon } from 'naive-ui'
-import { SearchOutline } from '@vicons/ionicons5'
+import { NLayout, NSpin, NIcon, NButton } from 'naive-ui'
+import { SearchOutline, SyncOutline } from '@vicons/ionicons5'
 import AppHeader from '../components/AppHeader.vue'
 import PluginCard from '../components/PluginCard.vue'
 import AppPagination from '../components/AppPagination.vue'
@@ -99,11 +113,8 @@ const filterKey = computed(() => {
   return `${searchQuery.value}-${selectedTag.value}-${sortBy.value}-${currentPage.value}`
 })
 
-// 方法
-const handlePageChange = (page) => {
-  currentPage.value = page
-  window.scrollTo({ top: 0, behavior: 'instant' })
-}
+// 动作
+const { refreshRandomOrder } = store
 
 // 生命周期钩子
 onMounted(() => {
@@ -124,6 +135,24 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 工具栏与卡片对齐 */
+.grid-toolbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.grid-toolbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 4px 0 8px;
+}
+.toolbar-tip {
+  color: var(--text-tertiary);
+  font-size: 13px;
 }
 
   .plugins-grid {

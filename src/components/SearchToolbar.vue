@@ -43,6 +43,7 @@ const emit = defineEmits(['update:searchQuery', 'update:currentPage', 'update:so
 
 const sortOptions = [
   { label: '默认排序', value: 'default' },
+  { label: '随机推荐', value: 'random' },
   { label: '按更新时间', value: 'updated' },
   { label: '按 Star 数量', value: 'stars' }
 ]

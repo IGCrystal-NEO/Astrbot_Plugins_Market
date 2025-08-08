@@ -55,7 +55,13 @@ const props = defineProps({
   sortBy: String
 })
 
-const emit = defineEmits(['update:modelValue', 'update:searchQuery', 'update:currentPage', 'update:sortBy'])
+const emit = defineEmits([
+  'update:modelValue',
+  'update:searchQuery',
+  'update:currentPage',
+  'update:sortBy',
+  'update:sort-by'
+])
 
 const handleThemeChange = (value) => {
   emit('update:modelValue', value)
@@ -71,6 +77,7 @@ const handleCurrentPageChange = (value) => {
 
 const handleSortByChange = (value) => {
   emit('update:sortBy', value)
+  emit('update:sort-by', value)
 }
 
 const railStyle = ({ focused, checked }) => {
