@@ -150,8 +150,8 @@
       "海龟汤"
     ],
     "stars": 2,
-    "updated_at": "2025-08-05T12:36:19Z",
-    "version": "v1.0.0"
+    "updated_at": "2025-08-08T02:09:50Z",
+    "version": "v1.0.1"
   },
   "astrbot_plugin_update_manager": {
     "desc": "一个用于一键更新所有 AstrBot 插件的工具，支持定时检查。",
@@ -772,8 +772,8 @@
     "desc": "切噜语翻译器",
     "repo": "https://github.com/irs1122/astrbot_plugin_cheru",
     "tags": [],
-    "stars": 1,
-    "updated_at": "2025-06-30T04:33:49Z",
+    "stars": 0,
+    "updated_at": "2025-08-08T01:39:14Z",
     "version": "v1.0"
   },
   "yandere_github_stalker": {
@@ -1524,8 +1524,8 @@
       "生图",
       "函数工具"
     ],
-    "stars": 7,
-    "updated_at": "2025-07-08T07:13:07Z",
+    "stars": 8,
+    "updated_at": "2025-08-08T01:55:46Z",
     "version": "v1.4.0"
   },
   "astrbot_plugin_dzmm": {
@@ -1963,8 +1963,8 @@
       "禁漫"
     ],
     "social_link": "https://github.com/GEMILUXVII",
-    "stars": 23,
-    "updated_at": "2025-08-02T08:12:35Z",
+    "stars": 24,
+    "updated_at": "2025-08-08T01:32:15Z",
     "version": "1.0.7"
   },
   "astrbot_plugin_combine-messages": {
@@ -2173,7 +2173,7 @@
     ],
     "social_link": "https://github.com/mingrixiangnai/0721anime",
     "stars": 2,
-    "updated_at": "2025-06-26T00:26:05Z",
+    "updated_at": "2025-08-08T02:23:34Z",
     "version": "1.0.0"
   },
   "astrbot_plugin_fishing": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 18,
-    "updated_at": "2025-08-07T23:25:47Z",
+    "updated_at": "2025-08-08T02:10:11Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -3185,8 +3185,8 @@
       "TTS"
     ],
     "social_link": "https://github.com/Zhalslar/astrbot_plugin_GPT_SoVITS",
-    "stars": 25,
-    "updated_at": "2025-08-07T19:42:49Z",
+    "stars": 26,
+    "updated_at": "2025-08-08T02:18:15Z",
     "version": "v1.1.9"
   },
   "astrbot_plugin_search_pic": {
@@ -4354,8 +4354,8 @@
     "author": "Soulter",
     "repo": "https://github.com/Soulter/astrbot_plugin_essential",
     "tags": [],
-    "stars": 27,
-    "updated_at": "2025-07-20T10:14:48Z",
+    "stars": 28,
+    "updated_at": "2025-08-08T02:31:58Z",
     "version": "v1.1.0"
   },
   "astrbot_plugin_rss": {
