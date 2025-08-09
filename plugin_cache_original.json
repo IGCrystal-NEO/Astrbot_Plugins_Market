@@ -8,7 +8,7 @@
       "海龟汤"
     ],
     "stars": 2,
-    "updated_at": "2025-08-08T17:52:31Z",
+    "updated_at": "2025-08-09T03:23:59Z",
     "version": "v1.0.0"
   },
   "astrbot_plugin_typst_render": {
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 19,
-    "updated_at": "2025-08-09T01:59:02Z",
+    "updated_at": "2025-08-09T03:24:14Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -4147,8 +4147,8 @@
       "webui",
       "图床"
     ],
-    "stars": 71,
-    "updated_at": "2025-08-07T01:51:38Z",
+    "stars": 72,
+    "updated_at": "2025-08-09T03:02:18Z",
     "version": "v3.13"
   },
   "mccloud_command": {
@@ -4787,8 +4787,8 @@
     "repo": "https://github.com/zgojin/astrbot_plugin_pock",
     "tags": [],
     "stars": 4,
-    "updated_at": "2025-07-04T01:14:53Z",
-    "version": "v1.8"
+    "updated_at": "2025-08-09T03:31:37Z",
+    "version": "v2.0.0"
   },
   "astrbot_plugin_astrbot_plugin_repetition": {
     "desc": "用于AstrBot的复读机插件",
