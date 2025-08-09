@@ -46,8 +46,8 @@
       "文转图"
     ],
     "stars": 0,
-    "updated_at": "2025-08-06T02:02:06Z",
-    "version": "v1.0"
+    "updated_at": "2025-08-09T11:09:10Z",
+    "version": "v1.1.0"
   },
   "pjsk_guess_song": {
     "desc": "PJSK 猜歌游戏插件",
@@ -2486,7 +2486,7 @@
     ],
     "social_link": "https://wenturc.com/",
     "stars": 19,
-    "updated_at": "2025-08-09T10:24:48Z",
+    "updated_at": "2025-08-09T11:19:31Z",
     "version": "v1.6.3"
   },
   "astrbot_plugin_status-pro": {
@@ -4750,8 +4750,8 @@
     "author": "长安某",
     "repo": "https://github.com/zgojin/astrbot_plugin_AW",
     "tags": [],
-    "stars": 9,
-    "updated_at": "2025-08-08T02:35:42Z",
+    "stars": 10,
+    "updated_at": "2025-08-09T10:59:32Z",
     "version": "v1.5.3"
   },
   "astrbot_plugin_mnemosyne": {
